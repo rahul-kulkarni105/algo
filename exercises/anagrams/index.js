@@ -8,6 +8,79 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// First Solution
+
+// regEx to use, /[^\w]/g
+// function anagrams(stringA, stringB) {
+//   const {
+//     charMap: aCharMap,
+//     cleanString: aCleanString,
+//   } = buildCharMap(stringA);
+//   const {
+//     charMap: bCharMap,
+//     cleanString: bCleanString,
+//   } = buildCharMap(stringB);
+//   if (aCleanString.length !== bCleanString.length) {
+//     return false;
+//   }
+
+//   for (let char in aCharMap) {
+//     if (aCharMap[char] !== bCharMap[char]) {
+//       return false;
+//     }
+//     return true;
+//   }
+// }
+
+// function anagrams(stringA, stringB) {
+//   const {
+//     charMap: aCharMap
+//   } = buildCharMap(stringA);
+//   const {
+//     charMap: bCharMap
+//   } = buildCharMap(stringB);
+//   if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+//     return false;
+//   }
+
+//   for (let char in aCharMap) {
+//     if (aCharMap[char] !== bCharMap[char]) {
+//       return false;
+//     }
+//     return true;
+//   }
+// }
+
+// Helper function for first soliution
+// function buildCharMap(string) {
+//   const charMap = {};
+//   const cleanString = string.replace(/[^\w]/g, '').toLowerCase();
+//   for (let char of cleanString) {
+//     charMap[char] = charMap[char] + 1 || 1;
+//   }
+//   return {
+//     charMap,
+//     cleanString
+//   };
+// }
+
+// Second Solution
+// Array.sort() way
+function anagrams(stringA, stringB) {
+  const aCheck = sortString(stringA);
+  const bCheck = sortString(stringB);
+  return aCheck === bCheck;
+}
+
+// Helper function for second soliution
+function sortString(string) {
+  return string
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
+}
+
 
 module.exports = anagrams;
