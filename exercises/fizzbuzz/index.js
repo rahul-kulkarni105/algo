@@ -12,6 +12,21 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  for (let i = 1; i<= n; i++) {
+    const divFive = i % 5 === 0;
+    const divThree = i % 3 === 0;
+    // can also check for i % 15 to check if it is divisble by both 3 and 5
+    if (divFive && divThree) {
+      console.log('fizzbuzz');
+    } else if (divThree) {
+      console.log('fizz');
+    } else if (divFive) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
 
 module.exports = fizzBuzz;
