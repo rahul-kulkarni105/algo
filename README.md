@@ -78,3 +78,10 @@ Companion repo to a course on Udemy.com
 
 ### Searching a sorted array
 = O(log(n)) - Already soprted array and finding someting inside it.
+
+
+# Space Complexity
+
+	- How much more memory is required by doubling the problem set?
+	- Generally you can apply the same rules as runtime complexity.
+	- Reversing a string is a great example, every additional charc added to result set, was one to one mapped.
