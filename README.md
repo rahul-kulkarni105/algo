@@ -43,3 +43,38 @@ Companion repo to a course on Udemy.com
 
 ### Exponential Time = 2 ^ n
   - If you add a single element to a collection, the processing power required doubles.
+
+
+# Big O Notation
+
+- Efficiency of algorithm
+
+## O(n) = Linear = Big O
+
+## O(1) = Constant
+
+## O(n^2) = Quadratic
+
+
+## Identifying Runtime Complexity
+
+### Iterating with a simple for loop through a single collection?
+= Probably O(n) - Linear runtime
+
+### Iterating through half a collection?
+= Still O(n). There is no constants in runtime. No 3 times, 2 times.
+
+### Iterating through differnent collections of data/ two SEPERATE for loops
+= O(n + m) - That has runtime
+
+### Two nested loopsiterating over the same collection?
+= O(n^2) - Big Red flag. Two nested for loops.
+
+### Two nested for loops over different collections?
+= O(n*m)
+
+### Sorting?
+= O(n*log(n)) - Almost every sorting algo, best complexity will be
+
+### Searching a sorted array
+= O(log(n)) - Already soprted array and finding someting inside it.
