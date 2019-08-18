@@ -27,7 +27,7 @@
 function fib(n) {
   /**
    * Time complexity of Fib recursive problem.
-   * 
+   *
    */
 
   if (n < 2) {
