@@ -85,3 +85,9 @@ Companion repo to a course on Udemy.com
 	- How much more memory is required by doubling the problem set?
 	- Generally you can apply the same rules as runtime complexity.
 	- Reversing a string is a great example, every additional charc added to result set, was one to one mapped.
+
+
+# Data Structures
+
+- Ways of organizing information with optimal 'runtime complexity' for adding or removing records.
+- Javascript natively implements several data structures.
