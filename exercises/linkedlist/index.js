@@ -28,8 +28,21 @@
  * nodeOne.next = nodeTwo; == Linked list.
  */
 
-class Node {}
+class Node {
+  // Use null for last reference of next, instead of undefined.
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
 
-class LinkedList {}
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+}
+
+// const list = new LinkedList();
+// list.head = new Node(10);
 
 module.exports = { Node, LinkedList };
